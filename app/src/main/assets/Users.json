@@ -22,16 +22,16 @@
   },
   {
     "id" : 4,
-    "email": "Tralochan5268@gmail.com",
+    "email": "Tarlochan5268@gmail.com",
     "password" : "tarlochan",
     "address" : "100 Mornelle Court, #1049, Scarborough ON, M1E 4X2",
-    "fullName" : "Das Tarlochan"
+    "fullName" : "Tarlochan Preet Singh"
   },
   {
     "id" : 5,
-    "email": "meghanarang98@gmail.com",
-    "password" : "megha",
+    "email": "meghnanarang98@gmail.com",
+    "password" : "meghna",
     "address" : "65 Nielson road, Scarborough ON, M1H 4J2",
-    "fullName" : "Megha Narang"
+    "fullName" : "Meghna Narang"
   }
 ]
