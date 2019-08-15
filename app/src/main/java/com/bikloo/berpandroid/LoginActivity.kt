@@ -6,6 +6,7 @@ import android.content.SharedPreferences
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.EditText
 import kotlinx.android.synthetic.main.activity_login.*
 import java.util.regex.Pattern
 
@@ -59,5 +60,12 @@ class LoginActivity : AppCompatActivity() {
         edtEmail.setText(email)
         edtPassword.setText(password)
     }
+    //To validate email
+    fun validateEmail(email: String): Boolean? {
 
+        val regex = "^[a-z0-9A-Z\\.]*@[a-z0-9A-Z]*\\.[a-zA-Z]*$"
+        val pattern = Pattern.compile(regex)
+        val matcher = pattern.matcher(email)
+        return if (matcher.matches()) {true} else {false}
+    }
 }
