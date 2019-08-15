@@ -5,6 +5,7 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.EditText
 import kotlinx.android.synthetic.main.activity_login.*
@@ -24,6 +25,12 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
+    fun clickedLogin(view : View)
+    {
+        saveRememeberMe()
+        Log.d("Edt Email : ---->",edtEmail.text!!.toString())
+        Log.d("Edt Password : ---->",edtPassword.text!!.toString())
+    }
     fun goToSignUp(view : View)
     {
 
@@ -60,6 +67,7 @@ class LoginActivity : AppCompatActivity() {
         edtEmail.setText(email)
         edtPassword.setText(password)
     }
+
     //To validate email
     fun validateEmail(email: String): Boolean? {
 

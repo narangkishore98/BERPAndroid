@@ -1,0 +1,37 @@
+[
+  {
+     "id" : 1,
+    "email": "ashishsharma161991@gmail.com",
+    "password" : "ashish",
+    "address" : "100 Mornelle Court, #1049, Scarborough ON, M1E 4X2",
+    "fullName" : "Ashish Sharma"
+  },
+  {
+    "id" : 2,
+    "email": "ashishsharma161991@gmail.com",
+    "password" : "ashish",
+    "address" : "100 Mornelle Court, #1049, Scarborough ON, M1E 4X2",
+    "fullName" : "Ashish Sharma"
+  },
+  {
+    "id" : 3,
+    "email": "ashishsharma161991@gmail.com",
+    "password" : "ashish",
+    "address" : "100 Mornelle Court, #1049, Scarborough ON, M1E 4X2",
+    "fullName" : "Ashish Sharma"
+  },
+  {
+    "id" : 4,
+    "email": "ashishsharma161991@gmail.com",
+    "password" : "ashish",
+    "address" : "100 Mornelle Court, #1049, Scarborough ON, M1E 4X2",
+    "fullName" : "Ashish Sharma"
+  },
+  {
+    "id" : 5,
+    "email": "ashishsharma161991@gmail.com",
+    "password" : "ashish",
+    "address" : "100 Mornelle Court, #1049, Scarborough ON, M1E 4X2",
+    "fullName" : "Ashish Sharma"
+  }
+]
