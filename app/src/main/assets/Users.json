@@ -8,30 +8,30 @@
   },
   {
     "id" : 2,
-    "email": "ashishsharma161991@gmail.com",
-    "password" : "ashish",
-    "address" : "100 Mornelle Court, #1049, Scarborough ON, M1E 4X2",
-    "fullName" : "Ashish Sharma"
+    "email": "narangkishore98@gmail.com",
+    "password" : "kishore",
+    "address" : "10 Queens Street, Markham ON, M6X 7V5",
+    "fullName" : "Kishore Narang"
   },
   {
     "id" : 3,
-    "email": "ashishsharma161991@gmail.com",
-    "password" : "ashish",
-    "address" : "100 Mornelle Court, #1049, Scarborough ON, M1E 4X2",
-    "fullName" : "Ashish Sharma"
+    "email": "nikhil050@gmail.com",
+    "password" : "nikhil",
+    "address" : "85 Owlridge Drive, Brampton ON, L6X 0M5 ",
+    "fullName" : "Nikhil"
   },
   {
     "id" : 4,
-    "email": "ashishsharma161991@gmail.com",
-    "password" : "ashish",
+    "email": "Tralochan5268@gmail.com",
+    "password" : "tarlochan",
     "address" : "100 Mornelle Court, #1049, Scarborough ON, M1E 4X2",
-    "fullName" : "Ashish Sharma"
+    "fullName" : "Das Tarlochan"
   },
   {
     "id" : 5,
-    "email": "ashishsharma161991@gmail.com",
-    "password" : "ashish",
-    "address" : "100 Mornelle Court, #1049, Scarborough ON, M1E 4X2",
-    "fullName" : "Ashish Sharma"
+    "email": "meghanarang98@gmail.com",
+    "password" : "megha",
+    "address" : "65 Nielson road, Scarborough ON, M1H 4J2",
+    "fullName" : "Megha Narang"
   }
 ]
