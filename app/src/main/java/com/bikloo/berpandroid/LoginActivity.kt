@@ -50,5 +50,14 @@ class LoginActivity : AppCompatActivity() {
         mEditor.commit()
     }
 
+    // to get back remember me values
+    private fun getRememberMe() {
+        mSharedpreferences = getSharedPreferences("MyPREFERENCES", Context.MODE_PRIVATE)
+        mEditor = mSharedpreferences.edit()
+        val email = mSharedpreferences.getString("email", "")
+        val password = mSharedpreferences.getString("password", "")
+        edtEmail.setText(email)
+        edtPassword.setText(password)
+    }
 
 }
