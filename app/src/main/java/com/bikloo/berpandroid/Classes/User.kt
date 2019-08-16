@@ -1,5 +1,5 @@
 package com.bikloo.berpandroid.Classes
-class User
+open class User
 {
     enum class UserType
     {
