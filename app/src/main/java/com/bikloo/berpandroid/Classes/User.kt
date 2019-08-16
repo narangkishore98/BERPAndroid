@@ -8,7 +8,7 @@ open class User
 
     companion object
     {
-        var userID : Int = 0
+        var USER_ID : Int = 0
     }
     var userId : Int? = null
     var email:String? = null
@@ -23,8 +23,8 @@ open class User
         this.password = password
         this.userType = userType
         this.address = address
-        userID += 1
-        this.userId = userID
+        USER_ID += 1
+        this.userId = USER_ID
     }
 
     fun doLogin(password:String) : Boolean
