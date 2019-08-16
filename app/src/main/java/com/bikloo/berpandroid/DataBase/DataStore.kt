@@ -55,7 +55,7 @@ class DataStore
 
 
     }
-    public fun getUserObjectFromJSON(userJsonObject : JSONObject) : User
+    fun getUserObjectFromJSON(userJsonObject : JSONObject) : User
     {
         val email : String = userJsonObject.getString("email")
         val password : String = userJsonObject.getString("password")
