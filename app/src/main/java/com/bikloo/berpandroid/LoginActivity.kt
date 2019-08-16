@@ -8,6 +8,8 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.EditText
+import com.bikloo.berpandroid.Classes.User
+import com.bikloo.berpandroid.DataBase.DataStore
 import kotlinx.android.synthetic.main.activity_login.*
 import java.util.regex.Pattern
 
@@ -17,6 +19,8 @@ class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?)
     {
+        val dataStore = DataStore(this)
+        dataStore.processJSON()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
@@ -28,8 +32,6 @@ class LoginActivity : AppCompatActivity() {
     fun clickedLogin(view : View)
     {
         saveRememeberMe()
-        Log.d("Edt Email : ---->",edtEmail.text!!.toString())
-        Log.d("Edt Password : ---->",edtPassword.text!!.toString())
     }
     fun goToSignUp(view : View)
     {
