@@ -1,9 +1,7 @@
 package com.bikloo.berpandroid.Classes
 
-class Employee :User
+class Owner :User
 {
-
-    var points: Int = 0
 
     constructor(email: String?, fullName: String?, password: String?, userType: UserType?, address: String?) : super(
         email,
