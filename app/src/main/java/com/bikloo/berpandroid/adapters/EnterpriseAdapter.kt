@@ -1,17 +1,25 @@
 package com.bikloo.berpandroid.adapters
 
+import android.content.Context
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import com.bikloo.berpandroid.Classes.Enterprise
 import com.bikloo.berpandroid.R
+import kotlinx.android.synthetic.main.activity_dashboard_activiy.view.*
 
 class EnterpriseAdapter (val enterprises:ArrayList<Enterprise>) : RecyclerView.Adapter<EnterpriseViewHolder>()
 {
+
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): EnterpriseViewHolder {
         val view = LayoutInflater.from(p0.context).inflate(R.layout.enterprise_list_layout,p0, false)
+        view.setOnClickListener(View.OnClickListener {
+            val clickedEnterpriseIndex = p0.enterprisesRecyclerView.getChildLayoutPosition(view)
+            Toast.makeText(p0.context,"Testing" , Toast.LENGTH_LONG ).show()
+        })
         return EnterpriseViewHolder(view)
     }
 
@@ -20,8 +28,8 @@ class EnterpriseAdapter (val enterprises:ArrayList<Enterprise>) : RecyclerView.A
     }
 
     override fun onBindViewHolder(p0: EnterpriseViewHolder, p1: Int) {
-        p0.enterpriseAddress.text = enterprises[p1].enterpriseName
-        p0.enterpriseName.text = enterprises[p1].address
+        p0.enterpriseAddress.text = enterprises[p1].address
+        p0.enterpriseName.text = enterprises[p1].enterpriseName
     }
 
 }
