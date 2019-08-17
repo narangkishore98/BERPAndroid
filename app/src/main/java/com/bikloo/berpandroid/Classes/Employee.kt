@@ -1,6 +1,10 @@
 package com.bikloo.berpandroid.Classes
 
-class Employee :User
+import android.os.Parcel
+import android.os.Parcelable
+import java.io.Serializable
+
+class Employee : User , Serializable
 {
 
     var points: Int = 0
@@ -26,4 +30,7 @@ class Employee :User
     override fun toString(): String {
         return super.toString()+" points : $points "
     }
+
+
+
 }

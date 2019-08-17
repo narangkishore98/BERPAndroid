@@ -1,6 +1,8 @@
 package com.bikloo.berpandroid.Classes
 
-class Enterprise
+import java.io.Serializable
+
+class Enterprise : Serializable
 {
     enum class EnterpriseType
     {

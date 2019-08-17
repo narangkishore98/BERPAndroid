@@ -6,6 +6,10 @@ open class User
         Owner , Employee
     }
 
+    constructor()
+    {
+
+    }
     companion object
     {
         var USER_ID : Int = 0

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".EnterpriseDetailActivity">
+
+    <TextView
+            android:text="Enterprise Details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtHeading" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="60dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            android:textColor="@color/colorPrimary" android:textStyle="bold" android:textSize="20sp"/>
+    <TextView
+            android:text="Enterprise Name:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtHeadingForEnterpriseName" android:layout_marginTop="168dp"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="56dp"/>
+    <TextView
+            android:text="Address:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtHeadingForEnterpriseAddress" android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/txtHeadingForEnterpriseName"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="56dp"/>
+    <TextView
+            android:text="Bonus Multiplier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtHeadingForBonusMultiplier"
+            app:layout_constraintTop_toBottomOf="@+id/txtHeadingForEnterpriseAddress" android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="56dp"/>
+    <TextView
+            android:text="Enterprise Type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtHeadingForEnterpriseType"
+            app:layout_constraintTop_toBottomOf="@+id/txtHeadingForBonusMultiplier" android:layout_marginTop="12dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="56dp"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="214dp"
+            android:layout_height="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toEndOf="@+id/txtHeadingForEnterpriseName" android:layout_marginStart="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/txtHeading" android:layout_marginTop="152dp"
+            android:id="@+id/txtDtlBonusMultiplier"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="214dp"
+            android:layout_height="18dp"
+            android:id="@+id/txtDtlEnterpriseType" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toEndOf="@+id/txtHeadingForEnterpriseName" android:layout_marginStart="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/txtHeading" android:layout_marginTop="180dp"
+    />
+    <TextView
+            android:text="TextView"
+            android:layout_width="214dp"
+            android:layout_height="18dp"
+            android:id="@+id/txtDtlEnterpriseAddress" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toEndOf="@+id/txtHeadingForEnterpriseName" android:layout_marginStart="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/txtHeading" android:layout_marginTop="116dp"
+    />
+    <TextView
+            android:text="TextView"
+            android:layout_width="214dp"
+            android:layout_height="18dp"
+            android:id="@+id/txtDtlEnterpriseBonusMultiplier" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toEndOf="@+id/txtHeadingForEnterpriseName" android:layout_marginStart="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/txtHeading" android:layout_marginTop="80dp"
+    />
+</android.support.constraint.ConstraintLayout>

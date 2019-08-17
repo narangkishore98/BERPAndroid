@@ -1,6 +1,7 @@
 package com.bikloo.berpandroid.adapters
 
 import android.content.Context
+import android.os.Bundle
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
 import com.bikloo.berpandroid.Classes.Enterprise
+import com.bikloo.berpandroid.EnterpriseDetailActivity
 import com.bikloo.berpandroid.R
 import kotlinx.android.synthetic.main.activity_dashboard_activiy.view.*
 
@@ -18,7 +20,12 @@ class EnterpriseAdapter (val enterprises:ArrayList<Enterprise>) : RecyclerView.A
         val view = LayoutInflater.from(p0.context).inflate(R.layout.enterprise_list_layout,p0, false)
         view.setOnClickListener(View.OnClickListener {
             val clickedEnterpriseIndex = p0.enterprisesRecyclerView.getChildLayoutPosition(view)
-            Toast.makeText(p0.context,"Testing" , Toast.LENGTH_LONG ).show()
+
+            Toast.makeText(p0.context, "Taking you to the ${enterprises[p1].enterpriseName}'s Details", Toast.LENGTH_SHORT).show()
+            var bundle:Bundle = Bundle()
+            bundle.putSerializable("enterprise", enterprises[p1])
+            EnterpriseDetailActivity.open(p0.context,bundle)
+
         })
         return EnterpriseViewHolder(view)
     }
