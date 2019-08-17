@@ -74,9 +74,29 @@
             android:text="TextView"
             android:layout_width="214dp"
             android:layout_height="18dp"
-            android:id="@+id/txtDtlEnterpriseBonusMultiplier" app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/txtDtlEnterpriseName" app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="8dp"
             app:layout_constraintStart_toEndOf="@+id/txtHeadingForEnterpriseName" android:layout_marginStart="8dp"
             app:layout_constraintTop_toBottomOf="@+id/txtHeading" android:layout_marginTop="80dp"
     />
+    <com.getbase.floatingactionbutton.FloatingActionsMenu android:layout_width="wrap_content"
+                                                          android:layout_height="wrap_content"
+                                                          app:fab_addButtonColorNormal="@color/colorPrimary"
+                                                          app:fab_addButtonColorPressed="@color/design_default_color_primary_dark"
+
+
+                                                          app:layout_constraintEnd_toEndOf="parent"
+                                                          android:layout_marginEnd="8dp"
+                                                          android:layout_marginBottom="8dp"
+                                                          app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton android:layout_width="wrap_content"
+                                                               android:layout_height="wrap_content"
+                                                                app:fab_colorNormal="@color/colorAccent"
+                                                               app:fab_colorPressed="@color/colorPrimaryDark"
+                                                               app:fab_icon="@drawable/ic_add"
+                                                               app:fabSize="mini"
+                                                               android:id="@+id/item1"
+        />
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
 </android.support.constraint.ConstraintLayout>
