@@ -18,6 +18,14 @@
             android:text="@string/title_home"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
+    <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp" app:srcCompat="@drawable/logo"
+            android:id="@+id/imageView"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="7dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="131dp"
+            android:layout_marginBottom="518dp" app:layout_constraintBottom_toTopOf="@+id/nav_view"
+            app:layout_constraintStart_toEndOf="@+id/message" android:layout_marginStart="76dp"/>
 
     <android.support.design.widget.BottomNavigationView
             android:id="@+id/nav_view"
