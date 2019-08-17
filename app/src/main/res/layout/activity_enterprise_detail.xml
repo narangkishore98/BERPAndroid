@@ -84,7 +84,7 @@
                                                           app:fab_addButtonColorNormal="@color/colorPrimary"
                                                           app:fab_addButtonColorPressed="@color/design_default_color_primary_dark"
 
-
+                                                          android:id="@+id/floatingMenu"
                                                           app:layout_constraintEnd_toEndOf="parent"
                                                           android:layout_marginEnd="8dp"
                                                           android:layout_marginBottom="8dp"
@@ -96,7 +96,9 @@
                                                                app:fab_colorPressed="@color/colorPrimaryDark"
                                                                app:fab_icon="@drawable/ic_add"
                                                                app:fabSize="mini"
-                                                               android:id="@+id/item1"
+
+                                                               app:fab_title="Add Employee"
+                                                               android:id="@+id/addEmployeeFab"
         />
     </com.getbase.floatingactionbutton.FloatingActionsMenu>
 </android.support.constraint.ConstraintLayout>
