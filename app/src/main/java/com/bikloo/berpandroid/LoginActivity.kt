@@ -27,6 +27,7 @@ class LoginActivity : AppCompatActivity() {
         if (switchRememberMe.isChecked() == true) {
             getRememberMe()
         }
+        this.supportActionBar!!.hide()
     }
 
     fun clickedLogin(view : View)
