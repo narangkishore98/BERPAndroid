@@ -33,6 +33,9 @@ class LoginActivity : AppCompatActivity() {
     fun clickedLogin(view : View)
     {
         saveRememeberMe()
+        DashboardActiviy.open(this, null)
+
+
     }
     fun goToSignUp(view : View)
     {
