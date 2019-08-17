@@ -19,8 +19,8 @@ class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?)
     {
-        val dataStore = DataStore(this)
-        dataStore.processJSON()
+        val dataStore = DataStore.instance.processJSON(this)
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 

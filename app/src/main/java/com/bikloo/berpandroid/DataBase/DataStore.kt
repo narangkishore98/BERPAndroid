@@ -1,6 +1,7 @@
 package com.bikloo.berpandroid.DataBase
 
 import android.content.Context
+import android.provider.ContactsContract
 import com.bikloo.berpandroid.Classes.User
 import org.json.JSONArray
 import org.json.JSONException
@@ -11,17 +12,21 @@ import kotlin.collections.ArrayList
 
 class DataStore
 {
-    var context: Context
+
     lateinit var userList : ArrayList<User>
 
-    constructor(context: Context) {
-        this.context = context
+
+    companion object
+    {
+        var instance:DataStore = DataStore()
+
+
     }
 
-    fun loadJSONFromAsset(): String? {
+    fun loadJSONFromAsset(withContext: Context): String? {
         val json: String
         try {
-            val jsonRef = context.assets.open("Users.json")
+            val jsonRef = withContext.assets.open("Users.json")
             val size = jsonRef.available()
             val buffer = ByteArray(size)
             val count = jsonRef.read(buffer)
@@ -35,8 +40,8 @@ class DataStore
         return json
     }
 
-    fun processJSON() {
-        val jsonString = this.loadJSONFromAsset()
+    fun processJSON(withContext: Context) {
+        val jsonString = this.loadJSONFromAsset(withContext)
         if (jsonString != null) {
             try {
                 val mJSONArray = JSONArray(jsonString)
