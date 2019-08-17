@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
 
 class DashboardActiviy : AppCompatActivity() {
 
@@ -13,6 +14,12 @@ class DashboardActiviy : AppCompatActivity() {
 
         this.supportActionBar!!.title = "Dashboard"
 
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+
+        this.menuInflater.inflate(R.menu.menu_for_dashboard, menu)
+        return true
     }
     companion object
     {
