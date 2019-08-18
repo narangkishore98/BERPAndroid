@@ -1,6 +1,9 @@
 package com.bikloo.berpandroid
 
+import android.app.AlertDialog
+import android.app.Dialog
 import android.content.Context
+import android.content.DialogInterface
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -38,6 +41,13 @@ class AddProductFromBarcodeActivity : AppCompatActivity() {
             DataStore.selectedEnterprise!!.products.add(product)
             Toast.makeText(this,"Product Saved",Toast.LENGTH_SHORT).show()
 
+            var builder =    AlertDialog.Builder(this).setTitle("Task Completed").setMessage("The Product has been added Successfully. Do You Want to add more products ?")
+            builder.setPositiveButton(android.R.string.yes){dialog, which ->
+                finish()
+            }
+            builder.setNegativeButton(android.R.string.cancel){dialog, which ->
+                EnterpriseDetailActivity.open(this,null)
+            }
         })
     }
     fun getType( productType:String) : Product.ProductType
