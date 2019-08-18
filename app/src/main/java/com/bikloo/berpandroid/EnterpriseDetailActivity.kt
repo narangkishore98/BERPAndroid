@@ -51,6 +51,11 @@ class EnterpriseDetailActivity : AppCompatActivity() {
                 Toast.makeText(this, "View Employee",Toast.LENGTH_SHORT).show()
             }
         })
+        //adding functionality for FAB add products
+        addProductsFab.setOnClickListener(View.OnClickListener {
+            AddProductActivity.open(this,null)
+            Toast.makeText(this, "Add Products",Toast.LENGTH_SHORT).show()
+        })
     }
     fun showAlert(message:String, activity: Activity)
     {
