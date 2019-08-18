@@ -82,4 +82,10 @@ class LoginActivity : AppCompatActivity() {
         val matcher = pattern.matcher(email)
         return if (matcher.matches()) {true} else {false}
     }
+    fun validatePassword(password: String): Boolean? {
+        val regex = "@, (?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{8,}"
+        val pattern = Pattern.compile(regex)
+        val matcher = pattern.matcher(password)
+        return if (matcher.matches()){true} else{false}
+    }
 }
