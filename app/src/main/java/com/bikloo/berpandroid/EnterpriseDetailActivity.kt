@@ -24,7 +24,9 @@ class EnterpriseDetailActivity : AppCompatActivity() {
         }
         addEmployeeFab.setOnClickListener(View.OnClickListener {
 
-            AddEmployeeActivity.open(this,null)
+            var bundle = Bundle()
+            bundle.putSerializable("selectedEnterprise",selectedEnterprise)
+            AddEmployeeActivity.open(this,bundle)
             Toast.makeText(this, "Adding Employee",Toast.LENGTH_SHORT).show()
         })
     }
