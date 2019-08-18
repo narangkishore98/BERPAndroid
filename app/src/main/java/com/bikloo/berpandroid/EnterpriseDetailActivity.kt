@@ -33,15 +33,22 @@ class EnterpriseDetailActivity : AppCompatActivity() {
         })
 
         viewEmployeeFab.setOnClickListener(View.OnClickListener {
-            var bundle = Bundle()
-            bundle.putSerializable("selectedEnterprise",selectedEnterprise)
-            ViewEmployeeActivity.open(this,bundle)
-            Toast.makeText(this, "View Employee",Toast.LENGTH_SHORT).show()
+            if(selectedEnterprise!!.employees.size < 0)
+            {
+                showAlert("")
+            }
+            else
+            {
+                var bundle = Bundle()
+                bundle.putSerializable("selectedEnterprise",selectedEnterprise)
+                ViewEmployeeActivity.open(this,bundle)
+                Toast.makeText(this, "View Employee",Toast.LENGTH_SHORT).show()
+            }
         })
     }
     fun showAlert(message:String)
     {
-        Snackbar.make(, message, Snackbar.LENGTH_SHORT)
+        val mySnackbar = Snackbar.make(findViewById(R.id.myID), "No Employees Added yet.", Snackbar.LENGTH_SHORT)
     }
     companion object
     {
