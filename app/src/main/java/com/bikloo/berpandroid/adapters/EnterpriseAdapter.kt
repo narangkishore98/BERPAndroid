@@ -21,9 +21,9 @@ class EnterpriseAdapter (val enterprises:ArrayList<Enterprise>) : RecyclerView.A
         view.setOnClickListener(View.OnClickListener {
             val clickedEnterpriseIndex = p0.enterprisesRecyclerView.getChildLayoutPosition(view)
 
-            Toast.makeText(p0.context, "Taking you to the ${enterprises[p1].enterpriseName}'s Details", Toast.LENGTH_SHORT).show()
+            Toast.makeText(p0.context, "Taking you to the ${enterprises[clickedEnterpriseIndex].enterpriseName}'s Details", Toast.LENGTH_SHORT).show()
             var bundle:Bundle = Bundle()
-            bundle.putSerializable("enterprise", enterprises[p1])
+            bundle.putSerializable("enterprise", enterprises[clickedEnterpriseIndex])
             EnterpriseDetailActivity.open(p0.context,bundle)
 
         })

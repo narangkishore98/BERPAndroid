@@ -23,7 +23,9 @@ class EnterpriseDetailActivity : AppCompatActivity() {
             txtDtlEnterpriseType.text = "${selectedEnterprise.enterpriseType}"
         }
         addEmployeeFab.setOnClickListener(View.OnClickListener {
-            Toast.makeText(this, "Clicked On Add Employee",Toast.LENGTH_SHORT).show()
+
+            AddEmployeeActivity.open(this,null)
+            Toast.makeText(this, "Adding Employee",Toast.LENGTH_SHORT).show()
         })
     }
     companion object
