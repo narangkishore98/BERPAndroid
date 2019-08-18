@@ -24,7 +24,7 @@ class AddProductFromBarcodeActivity : AppCompatActivity() {
         spnrProductType.adapter = adapter
 
         btnAddProduct.setOnClickListener(View.OnClickListener {
-            Toast.makeText(this, "Button Is Working",Toast.LENGTH_SHORT).show
+            Toast.makeText(this, "Button Is Working",Toast.LENGTH_SHORT).show()
         })
     }
     companion object
