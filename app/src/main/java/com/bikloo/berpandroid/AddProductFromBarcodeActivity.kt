@@ -1,5 +1,6 @@
 package com.bikloo.berpandroid
 
+import android.app.Activity
 import android.app.AlertDialog
 import android.app.Dialog
 import android.content.Context
@@ -7,6 +8,7 @@ import android.content.DialogInterface
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.design.widget.Snackbar
 import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Toast
@@ -15,6 +17,15 @@ import com.bikloo.berpandroid.DataBase.DataStore
 import kotlinx.android.synthetic.main.activity_add_product_from_barcode.*
 
 class AddProductFromBarcodeActivity : AppCompatActivity() {
+
+
+    fun showAlert(message:String, activity: Activity)
+    {
+
+        val rootView = activity.window.decorView.findViewById<View>(android.R.id.content)
+        Snackbar.make(rootView, message, Snackbar.LENGTH_LONG).show()
+        // val mySnackbar = Snackbar.make(findViewById(R.id.myID), "No Employees Added yet.", Snackbar.LENGTH_SHORT)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,6 +49,11 @@ class AddProductFromBarcodeActivity : AppCompatActivity() {
 
             //var p = Product(productName, txtBarcode.text.toString(), )
             var product = Product(productName, txtBarcode.text.toString(), productDescripton, price, productType)
+            if(checkProductIfExists(product))
+            {
+                showAlert("Product Already Exist!", this)
+                finish()
+            }
             DataStore.selectedEnterprise!!.products.add(product)
             Toast.makeText(this,"Product Saved",Toast.LENGTH_SHORT).show()
 
@@ -48,6 +64,7 @@ class AddProductFromBarcodeActivity : AppCompatActivity() {
             builder.setNegativeButton(android.R.string.cancel){dialog, which ->
                 EnterpriseDetailActivity.open(this,null)
             }
+            builder.show()
         })
     }
     fun getType( productType:String) : Product.ProductType
@@ -80,5 +97,16 @@ class AddProductFromBarcodeActivity : AppCompatActivity() {
             withContext.startActivity(i)
 
         }
+    }
+    fun checkProductIfExists(product:Product):Boolean
+    {
+        for(mProduct in DataStore.selectedEnterprise!!.products)
+        {
+            if(mProduct.barcode==product.barcode)
+            {
+                return true
+            }
+        }
+        return false
     }
 }
