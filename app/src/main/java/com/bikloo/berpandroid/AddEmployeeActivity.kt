@@ -8,6 +8,7 @@ import android.util.Log
 import android.view.View
 import com.bikloo.berpandroid.Classes.Employee
 import com.bikloo.berpandroid.Classes.Enterprise
+import com.bikloo.berpandroid.DataBase.DataStore
 import kotlinx.android.synthetic.main.activity_add_employee.*
 import java.util.*
 import kotlin.random.Random
@@ -26,7 +27,7 @@ class AddEmployeeActivity : AppCompatActivity() {
 
             Log.d("Data","$empAddress , $empEmail , $empName")
             val newEmployeeObject = Employee(empEmail!!, empName!!,"${Random.nextInt(1000,9999)}" , empAddress!! )
-            selectedEnterprise!!.employees.add(newEmployeeObject)
+            DataStore.selectedEnterprise!!.employees.add(newEmployeeObject)
 
             var bundle = Bundle()
 
