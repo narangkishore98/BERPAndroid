@@ -23,6 +23,10 @@ class AddProductActivity : AppCompatActivity() , ZXingScannerView.ResultHandler 
     override fun handleResult(rawResult: Result?) {
         showAlert("Barcode Scanned " + rawResult!!.text,this)
 
+
+        var b = Bundle()
+        b.putString("barcode", rawResult.text)
+        AddProductFromBarcodeActivity.open(this, b)
         //mScannerView!!.resumeCameraPreview(this)
     }
 
