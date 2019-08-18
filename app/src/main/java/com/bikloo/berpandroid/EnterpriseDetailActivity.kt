@@ -4,6 +4,8 @@ import android.content.Context
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.design.widget.Snackbar
+import android.support.v7.app.AlertDialog
 import android.view.View
 import android.widget.Toast
 import com.bikloo.berpandroid.Classes.Enterprise
@@ -36,6 +38,10 @@ class EnterpriseDetailActivity : AppCompatActivity() {
             ViewEmployeeActivity.open(this,bundle)
             Toast.makeText(this, "View Employee",Toast.LENGTH_SHORT).show()
         })
+    }
+    fun showAlert(message:String)
+    {
+        Snackbar.make(, message, Snackbar.LENGTH_SHORT)
     }
     companion object
     {
