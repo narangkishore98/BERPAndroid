@@ -29,6 +29,13 @@ class EnterpriseDetailActivity : AppCompatActivity() {
             AddEmployeeActivity.open(this,bundle)
             Toast.makeText(this, "Adding Employee",Toast.LENGTH_SHORT).show()
         })
+
+        viewEmployeeFab.setOnClickListener(View.OnClickListener {
+            var bundle = Bundle()
+            bundle.putSerializable("selectedEnterprise",selectedEnterprise)
+            ViewEmployeeActivity.open(this,bundle)
+            Toast.makeText(this, "View Employee",Toast.LENGTH_SHORT).show()
+        })
     }
     companion object
     {

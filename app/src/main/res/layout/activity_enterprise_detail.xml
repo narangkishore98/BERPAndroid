@@ -101,5 +101,38 @@
                                                                app:fab_title="Add Employee"
                                                                android:id="@+id/addEmployeeFab"
         />
+        <com.getbase.floatingactionbutton.FloatingActionButton android:layout_width="wrap_content"
+                                                               android:layout_height="wrap_content"
+                                                               app:fab_colorNormal="@color/white"
+                                                               app:fab_colorPressed="@color/white_pressed"
+                                                               app:fab_icon="@drawable/ic_eye"
+                                                               app:fabSize="mini"
+
+                                                               app:fab_title="View Employee"
+                                                               android:id="@+id/viewEmployeeFab"
+        />
+        <com.getbase.floatingactionbutton.FloatingActionButton android:layout_width="wrap_content"
+                                                               android:layout_height="wrap_content"
+                                                               app:fab_colorNormal="@color/white"
+                                                               app:fab_colorPressed="@color/white_pressed"
+                                                               app:fab_icon="@drawable/ic_add_product"
+                                                               app:fabSize="mini"
+
+                                                               app:fab_title="View Employee"
+                                                               android:id="@+id/addProductsFab"
+        />
+        <com.getbase.floatingactionbutton.FloatingActionButton android:layout_width="wrap_content"
+                                                               android:layout_height="wrap_content"
+                                                               app:fab_colorNormal="@color/white"
+                                                               app:fab_colorPressed="@color/white_pressed"
+                                                               app:fab_icon="@drawable/ic_view_product"
+                                                               app:fabSize="mini"
+
+                                                               app:fab_title="View Employee"
+                                                               android:id="@+id/viewProductsFab"
+        />
     </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+
+
 </android.support.constraint.ConstraintLayout>
