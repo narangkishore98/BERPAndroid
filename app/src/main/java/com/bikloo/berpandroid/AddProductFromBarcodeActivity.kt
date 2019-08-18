@@ -42,6 +42,12 @@ class AddProductFromBarcodeActivity : AppCompatActivity() {
 
         btnAddProduct.setOnClickListener(View.OnClickListener {
             //Toast.makeText(this, "Button Is Working",Toast.LENGTH_SHORT).show()
+            if(checkProductIfExistsWithBarcode(txtBarcode.text.toString()))
+            {
+                showAlert("Product Already Exist!", this)
+                finish()
+            }
+            else {
             val productName = edtProductName.text.toString()
             val productDescripton = edtDescription.text.toString()
             val price = edtPrice.text.toString().toFloat()
@@ -49,22 +55,20 @@ class AddProductFromBarcodeActivity : AppCompatActivity() {
 
             //var p = Product(productName, txtBarcode.text.toString(), )
             var product = Product(productName, txtBarcode.text.toString(), productDescripton, price, productType)
-            if(checkProductIfExists(product))
-            {
-                showAlert("Product Already Exist!", this)
-                finish()
-            }
-            DataStore.selectedEnterprise!!.products.add(product)
-            Toast.makeText(this,"Product Saved",Toast.LENGTH_SHORT).show()
 
-            var builder =    AlertDialog.Builder(this).setTitle("Task Completed").setMessage("The Product has been added Successfully. Do You Want to add more products ?")
-            builder.setPositiveButton(android.R.string.yes){dialog, which ->
-                finish()
+                DataStore.selectedEnterprise!!.products.add(product)
+                Toast.makeText(this, "Product Saved", Toast.LENGTH_SHORT).show()
+
+                var builder = AlertDialog.Builder(this).setTitle("Task Completed")
+                    .setMessage("The Product has been added Successfully. Do You Want to add more products ?")
+                builder.setPositiveButton(android.R.string.yes) { dialog, which ->
+                    finish()
+                }
+                builder.setNegativeButton(android.R.string.cancel) { dialog, which ->
+                    EnterpriseDetailActivity.open(this, null)
+                }
+                builder.show()
             }
-            builder.setNegativeButton(android.R.string.cancel){dialog, which ->
-                EnterpriseDetailActivity.open(this,null)
-            }
-            builder.show()
         })
     }
     fun getType( productType:String) : Product.ProductType
@@ -98,11 +102,11 @@ class AddProductFromBarcodeActivity : AppCompatActivity() {
 
         }
     }
-    fun checkProductIfExists(product:Product):Boolean
+    fun checkProductIfExistsWithBarcode(barcode:String):Boolean
     {
-        for(mProduct in DataStore.selectedEnterprise!!.products)
+        for(product in DataStore.selectedEnterprise!!.products)
         {
-            if(mProduct.barcode==product.barcode)
+            if(barcode.equals(product.barcode))
             {
                 return true
             }
