@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import com.bikloo.berpandroid.Classes.Enterprise
+import com.bikloo.berpandroid.DataBase.DataStore
 import com.bikloo.berpandroid.adapters.ViewEmployeeAdapter
 import kotlinx.android.synthetic.main.activity_view_employee.*
 
@@ -16,7 +17,7 @@ class ViewEmployeeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_view_employee)
         supportActionBar!!.title = "View Employees"
         recyclerViewEmployeeDetails.layoutManager = LinearLayoutManager(this)
-        var employees = (intent.getSerializableExtra("selectedEnterprise") as Enterprise).employees
+        var employees = (DataStore.selectedEnterprise!!).employees
         recyclerViewEmployeeDetails.adapter = ViewEmployeeAdapter(employees)
 
 

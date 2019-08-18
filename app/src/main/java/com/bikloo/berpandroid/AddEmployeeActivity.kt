@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import com.bikloo.berpandroid.Classes.Employee
 import com.bikloo.berpandroid.Classes.Enterprise
@@ -19,7 +20,12 @@ class AddEmployeeActivity : AppCompatActivity() {
         supportActionBar!!.title = "Add Employee"
         btnAddEmployee.setOnClickListener(View.OnClickListener {
             var selectedEnterprise = intent.extras.getSerializable("selectedEnterprise") as Enterprise?
-            val newEmployeeObject = Employee(edtEmpEmail.text.toString(), edtEmpName.text.toString(),"${Random.nextInt(1000,9999)}" , edtEmpAddress.text.toString() )
+            val empEmail = edtEmpEmail.text.toString()
+            val empName = edtEmpName.text.toString()
+            val empAddress = edtEmpAddress.text.toString()
+
+            Log.d("Data","$empAddress , $empEmail , $empName")
+            val newEmployeeObject = Employee(empEmail!!, empName!!,"${Random.nextInt(1000,9999)}" , empAddress!! )
             selectedEnterprise!!.employees.add(newEmployeeObject)
 
             var bundle = Bundle()

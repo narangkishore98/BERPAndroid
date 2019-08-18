@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
 import com.bikloo.berpandroid.Classes.Enterprise
+import com.bikloo.berpandroid.DataBase.DataStore
 import com.bikloo.berpandroid.EnterpriseDetailActivity
 import com.bikloo.berpandroid.R
 import kotlinx.android.synthetic.main.activity_dashboard_activiy.view.*
@@ -22,6 +23,7 @@ class EnterpriseAdapter (val enterprises:ArrayList<Enterprise>) : RecyclerView.A
             val clickedEnterpriseIndex = p0.enterprisesRecyclerView.getChildLayoutPosition(view)
 
             Toast.makeText(p0.context, "Taking you to the ${enterprises[clickedEnterpriseIndex].enterpriseName}'s Details", Toast.LENGTH_SHORT).show()
+            DataStore.selectedEnterprise = enterprises[clickedEnterpriseIndex]
             var bundle:Bundle = Bundle()
             bundle.putSerializable("enterprise", enterprises[clickedEnterpriseIndex])
             EnterpriseDetailActivity.open(p0.context,bundle)

@@ -2,6 +2,7 @@ package com.bikloo.berpandroid.DataBase
 
 import android.content.Context
 import android.provider.ContactsContract
+import com.bikloo.berpandroid.Classes.Enterprise
 import com.bikloo.berpandroid.Classes.User
 import org.json.JSONArray
 import org.json.JSONException
@@ -18,8 +19,9 @@ class DataStore
 
     companion object
     {
-        var instance:DataStore = DataStore()
+        val instance:DataStore = DataStore()
 
+        var selectedEnterprise:Enterprise? = null
 
     }
 
@@ -70,4 +72,5 @@ class DataStore
         //Log.d("User Obj : ->>>>",userOBJ.toString())
         return userOBJ
     }
+
 }

@@ -1,6 +1,7 @@
 package com.bikloo.berpandroid.adapters
 
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -18,8 +19,9 @@ class ViewEmployeeAdapter(val employees:MutableList<Employee>) : RecyclerView.Ad
     override fun getItemCount() = employees.size
 
     override fun onBindViewHolder(p0: ViewEmployeeViewHolder, p1: Int) {
-        p0.employeeBonusPoints.text = "${employees[p1].points}"
-        p0.employeeName.text = "${employees[p1].fullName!!}"
+        p0.employeeBonusPoints.text = "Points: ${employees[p1].points}"
+        p0.employeeName.text = "${employees[p1].fullName}"
+        Log.d("Data",employees[p1].toString())
 
     }
 
