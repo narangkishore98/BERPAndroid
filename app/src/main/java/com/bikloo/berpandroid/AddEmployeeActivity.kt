@@ -24,7 +24,7 @@ class AddEmployeeActivity : AppCompatActivity() {
 
             var bundle = Bundle()
 
-            bundle.putSerializable("selectedEnterprise",selectedEnterprise!!)
+            bundle.putSerializable("enterprise",selectedEnterprise!!)
 
             EnterpriseDetailActivity.open(this,bundle)
         })
