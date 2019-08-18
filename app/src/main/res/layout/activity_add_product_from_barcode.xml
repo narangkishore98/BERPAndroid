@@ -7,4 +7,28 @@
         android:layout_height="match_parent"
         tools:context=".AddProductFromBarcodeActivity">
 
+    <TextView
+            android:text="Enter Product Details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/headlineForAddProducts" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="32dp"
+            app:layout_constraintHorizontal_bias="0.488" android:textStyle="bold" android:textSize="22dp"
+            android:textColor="#009688"/>
+    <TextView
+            android:text="Item Barcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtLabelForBarcode" android:layout_marginTop="36dp"
+            app:layout_constraintTop_toBottomOf="@+id/headlineForAddProducts"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="52dp"/>
+    <TextView
+            android:text="Barcode Here"
+            android:layout_width="204dp"
+            android:layout_height="17dp"
+            android:id="@+id/txtBarcode" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="56dp"
+            app:layout_constraintStart_toEndOf="@+id/txtLabelForBarcode" android:layout_marginStart="8dp"
+            android:layout_marginTop="36dp" app:layout_constraintTop_toBottomOf="@+id/headlineForAddProducts"
+            app:layout_constraintHorizontal_bias="0.666" android:textAlignment="textEnd"/>
 </android.support.constraint.ConstraintLayout>
