@@ -11,7 +11,10 @@ class Owner :User
         UserType.Owner,
         address
     )
+    constructor()
+    {
 
+    }
     override fun toString(): String {
         return super.toString()
     }

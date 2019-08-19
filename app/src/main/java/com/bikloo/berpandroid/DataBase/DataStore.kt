@@ -14,7 +14,7 @@ import kotlin.collections.ArrayList
 
 class DataStore
 {
-    lateinit var userList : ArrayList<User>
+    lateinit var userList : ArrayList<Owner>
     companion object
     {
 
@@ -49,7 +49,7 @@ class DataStore
 
                 for (i in 0 until mJSONArray.length()) {
 
-                    val mUser : User = getUserObjectFromJSON(mJSONArray.getJSONObject(i))
+                    val mUser : Owner = getUserObjectFromJSON(mJSONArray.getJSONObject(i))
                     userList.add(mUser)
                     //Log.d("User List Obj ---->",mUser.toString())
                 }
@@ -60,13 +60,14 @@ class DataStore
 
 
     }
-    fun getUserObjectFromJSON(userJsonObject : JSONObject) : User
+    fun getUserObjectFromJSON(userJsonObject : JSONObject) : Owner
     {
         val email : String = userJsonObject.getString("email")
         val password : String = userJsonObject.getString("password")
         val address : String = userJsonObject.getString("address")
         val fullName : String = userJsonObject.getString("fullName")
-        val userOBJ = User(email,fullName,password,User.UserType.Owner,address)
+        val owner = Owner(email, fullName, password, address)
+        val userOBJ = owner//Owner(email,fullName,password,User.UserType.Owner,address)
         //Log.d("User Obj : ->>>>",userOBJ.toString())
         return userOBJ
     }

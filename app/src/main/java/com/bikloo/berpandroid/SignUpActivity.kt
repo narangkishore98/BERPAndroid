@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
+import com.bikloo.berpandroid.Classes.Owner
 import com.bikloo.berpandroid.Classes.User
 import com.bikloo.berpandroid.DataBase.DBUser
 import kotlinx.android.synthetic.main.activity_sign_up.*
@@ -57,7 +58,7 @@ class SignUpActivity : AppCompatActivity() {
                             else
                             {
                                 var mDBUser : DBUser = DBUser(this)
-                                var mUsersArrayList: MutableList<User> = mDBUser.allUsers
+                                var mUsersArrayList: MutableList<Owner> = mDBUser.allUsers
                                 var userID : Int = 1
                                 for(user in mUsersArrayList)
                                 {
@@ -66,7 +67,10 @@ class SignUpActivity : AppCompatActivity() {
                                 userID = userID+1
                                 Log.d("Id : ",userID.toString())
 
-                                mDBUser.insert(userID,User(edtEmailSignup.text!!.toString(),edtFullNameSignup.text!!.toString(),edtPasswordSignup.text!!.toString(),User.UserType.Owner,edtFullAddressSignup.text!!.toString()))
+                                mDBUser.insert(userID,
+                                    Owner(edtEmailSignup.text!!.toString(), edtFullNameSignup.text!!.toString(), edtPasswordSignup.text!!.toString(), edtFullAddressSignup.text!!.toString())
+                                    )
+                                //Owner(edtEmailSignup.text!!.toString(),edtFullNameSignup.text!!.toString(),edtPasswordSignup.text!!.toString(),User.UserType.Owner,edtFullAddressSignup.text!!.toString())
 
                                 Toast.makeText(this,"Registration Success",Toast.LENGTH_SHORT).show()
                                 mUsersArrayList = mDBUser.allUsers

@@ -19,7 +19,7 @@ class LoginActivity : AppCompatActivity() {
     lateinit var mSharedpreferences: SharedPreferences
     lateinit var mEditor: SharedPreferences.Editor
     lateinit var mDBUser : DBUser
-    lateinit var mUsersArrayList: MutableList<User>
+    lateinit var mUsersArrayList: MutableList<Owner>
 
     override fun onCreate(savedInstanceState: Bundle?)
     {

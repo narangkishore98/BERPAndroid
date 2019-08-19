@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import com.bikloo.berpandroid.Classes.Enterprise
 import com.bikloo.berpandroid.Classes.Product
 import com.bikloo.berpandroid.DataBase.DataStore
@@ -32,6 +33,8 @@ class AddEnterpriseActivity : AppCompatActivity() {
             enterprise.bonusMultiplier = enterpriseBonusMultiplier.toInt()
 
             DataStore.selectedOwner!!.addEnterprise(enterprise)
+            Toast.makeText(this,"Enterprise Added Successfully ${DataStore.selectedOwner!!.myEnterprise.size}",Toast.LENGTH_SHORT).show()
+            finish()
 
         })
 

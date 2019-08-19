@@ -1,5 +1,6 @@
 package com.bikloo.berpandroid
 
+import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
@@ -9,6 +10,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import com.bikloo.berpandroid.Classes.Enterprise
+import com.bikloo.berpandroid.DataBase.DataStore
 import com.bikloo.berpandroid.adapters.EnterpriseAdapter
 import kotlinx.android.synthetic.main.activity_dashboard_activiy.*
 
@@ -21,16 +23,39 @@ class DashboardActiviy : AppCompatActivity() {
         enterprisesRecyclerView.layoutManager = LinearLayoutManager(this)
         this.supportActionBar!!.title = "Dashboard"
 
-        var list:ArrayList<Enterprise> = ArrayList()
-           list.add(            Enterprise("Tim Hortons","New Address", Enterprise.EnterpriseType.Restaurant)
-               )
-            list.add(Enterprise("McDonalds","Old Address", Enterprise.EnterpriseType.Restaurant))
+//        var list:ArrayList<Enterprise> = ArrayList()
+//           list.add(            Enterprise("Tim Hortons","New Address", Enterprise.EnterpriseType.Restaurant)
+//               )
+//            list.add(Enterprise("McDonalds","Old Address", Enterprise.EnterpriseType.Restaurant))
+//
+//            list.add(                Enterprise("Dominos","New Address", Enterprise.EnterpriseType.Restaurant)
+//            )
+//
 
-            list.add(                Enterprise("Dominos","New Address", Enterprise.EnterpriseType.Restaurant)
-            )
 
-        enterprisesRecyclerView.adapter = EnterpriseAdapter(list)
+//        enterprisesRecyclerView.adapter = EnterpriseAdapter(list)
 
+        if(DataStore.selectedOwner!!.myEnterprise.size == 0)
+        {
+            var builder = AlertDialog.Builder(this).setTitle("Welcome")
+                .setMessage("You are here for first time. To access the services please add your first enterprise.")
+            builder.setPositiveButton(android.R.string.yes) { dialog, which ->
+                AddEnterpriseActivity.open(this,null)
+            }
+            builder.setNegativeButton("Logout") { dialog, which ->
+                finish()
+            }
+            builder.show()
+        }
+        else
+        {
+            var list:ArrayList<Enterprise> = ArrayList()
+            for(enterprise in DataStore.selectedOwner!!.myEnterprise)
+            {
+                list.add(enterprise)
+            }
+            enterprisesRecyclerView.adapter = EnterpriseAdapter(list)
+        }
 
     }
 

@@ -2,6 +2,7 @@ package com.bikloo.berpandroid.DataBase
 
 import android.content.ContentValues
 import android.content.Context
+import com.bikloo.berpandroid.Classes.Owner
 import com.bikloo.berpandroid.Classes.User
 import java.util.ArrayList
 
@@ -22,7 +23,7 @@ class DBUser(context: Context) {
         dbHelper = DBHelper(context)
     }
 
-    fun insert(user: User) {
+    fun insert(user: Owner) {
         val db = dbHelper.writableDatabase
 
         val cv = ContentValues()
@@ -36,7 +37,7 @@ class DBUser(context: Context) {
         db.close()
 
     }
-    fun insert(userID: Int,user: User) {
+    fun insert(userID: Int,user: Owner) {
         val db = dbHelper.writableDatabase
 
         val cv = ContentValues()
@@ -51,7 +52,7 @@ class DBUser(context: Context) {
 
     }
 
-    fun update(user: User) {
+    fun update(user: Owner) {
         val db = dbHelper.writableDatabase
 
         val cv = ContentValues()
@@ -72,18 +73,18 @@ class DBUser(context: Context) {
     }
 
 
-    val allUsers: ArrayList<User>
+    val allUsers: ArrayList<Owner>
         get()
         {
             val db = dbHelper.readableDatabase
             val mCursor = db.rawQuery("SELECT * FROM $TABLE_NAME", null)
 
-            val mUsers = ArrayList<User>()
+            val mUsers = ArrayList<Owner>()
             if (mCursor != null) {
                 if (mCursor.count != 0) {
                     mCursor.moveToFirst()
                     while (!mCursor.isAfterLast) {
-                        val mUser = User()
+                        val mUser = Owner()
                         mUser.userId=Integer.parseInt(mCursor.getString(0))
                         mUser.email=mCursor.getString(1)
                         mUser.fullName=mCursor.getString(2)
