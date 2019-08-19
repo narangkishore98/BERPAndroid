@@ -21,7 +21,7 @@ class ViewEmployeeAdapter(val employees:MutableList<Employee>) : RecyclerView.Ad
         view.setOnClickListener(View.OnClickListener {
             //CREATING A DIALOG FOR DISPLAYING THE INFORMATION OF EMPLOYEE
             val clickedEmployee = p0.recyclerViewEmployeeDetails.getChildLayoutPosition(view)
-            Toast.makeText(p0.context,"H",Toast.LENGTH_SHORT)
+            Toast.makeText(p0.context,"Employee Details Showing.",Toast.LENGTH_SHORT)
              AlertDialog.Builder(p0.context).setTitle("Employee Details")
                 .setMessage("Employee Name: ${employees[clickedEmployee].fullName}\nEmail: ${employees[clickedEmployee].email}\nAddress: ${employees[clickedEmployee].address}\nBonus Points: ${employees[clickedEmployee].points}").show()
         })
