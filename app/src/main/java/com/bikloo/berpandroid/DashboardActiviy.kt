@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.view.Menu
+import android.view.MenuItem
+import android.widget.Toast
 import com.bikloo.berpandroid.Classes.Enterprise
 import com.bikloo.berpandroid.adapters.EnterpriseAdapter
 import kotlinx.android.synthetic.main.activity_dashboard_activiy.*
@@ -36,6 +38,17 @@ class DashboardActiviy : AppCompatActivity() {
 
         this.menuInflater.inflate(R.menu.menu_for_dashboard, menu)
         return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        when(item!!.itemId)
+        {
+            R.id.menuItemLogout ->
+            {
+                Toast.makeText(this,"Logout",Toast.LENGTH_LONG)
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
     companion object
     {
