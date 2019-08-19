@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Toast
 import com.bikloo.berpandroid.Classes.User
 import com.bikloo.berpandroid.DataBase.DBUser
 import com.bikloo.berpandroid.DataBase.DataStore
@@ -51,6 +52,7 @@ class LoginActivity : AppCompatActivity() {
         if (switchRememberMe.isChecked() == true) {
             getRememberMe()
         }
+
         this.supportActionBar!!.hide()
     }
 
@@ -64,8 +66,56 @@ class LoginActivity : AppCompatActivity() {
     fun clickedLogin(view : View)
     {
         saveRememeberMe()
-        DashboardActiviy.open(this, null)
+        if (edtEmail.text!!.toString().isEmpty() || edtEmail.text!!.toString().trim { it <= ' ' }.length == 0) {
+            edtEmail.error = "Please Enter Email"
+            if (edtPassword.text!!.toString().isEmpty() || edtPassword.text!!.toString().trim { it <= ' ' }.length == 0) {
+                edtPassword.error = "Please Enter Password"
+            }
+        }
+        else
+        {
+            if(validateEmail(edtEmail.text!!.toString()))
+            {
+                var exist : Boolean = false
+                var existUser : User? = null
+                for(user in mDBUser.allUsers)
+                {
+                    if(user.email.equals(edtEmail.text!!.toString()))
+                    {
+                        exist = true
+                        existUser = user
+                    }
+                }
+                if(exist == true)
+                {
+                    if(existUser!!.password.equals(edtPassword.text!!.toString()))
+                    {
+                        if (switchRememberMe.isChecked == true) {
+                            saveRememeberMe()
+                        } else {
+                            saveRememeberMeEmpty()
+                        }
+                        Log.d("Correct Details User:",existUser.toString())
 
+
+                        DataStore.selectedUser = existUser
+                        DashboardActiviy.open(this, null)
+                    }
+                    else
+                    {
+                        edtPassword.error = "Incorrect Password Entered"
+                    }
+                }
+                else
+                {
+                    edtEmail.error = "No User Exist With This Email"
+                }
+            }
+            else
+            {
+                edtEmail.error = "Enter Valid Email"
+            }
+        }
 
     }
     fun goToSignUp(view : View)
@@ -106,7 +156,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     //To validate email
-    fun validateEmail(email: String): Boolean? {
+    fun validateEmail(email: String): Boolean {
 
         val regex = "^[a-z0-9A-Z\\.]*@[a-z0-9A-Z]*\\.[a-zA-Z]*$"
         val pattern = Pattern.compile(regex)

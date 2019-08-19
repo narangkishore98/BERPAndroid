@@ -19,7 +19,7 @@ class DataStore
 
         val instance:DataStore = DataStore()
         var selectedEnterprise:Enterprise? = null
-
+        var selectedUser : User? = null
     }
 
     fun loadJSONFromAsset(withContext: Context): String? {
