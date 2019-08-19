@@ -68,6 +68,7 @@ class EnterpriseDetailActivity : AppCompatActivity() {
                 ViewProductActivity.open(this,null)
                 Toast.makeText(this, "View Products",Toast.LENGTH_SHORT).show()
             }
+
         })
     }
     fun showAlert(message:String, activity: Activity)
