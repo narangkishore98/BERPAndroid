@@ -41,11 +41,19 @@ class DashboardActiviy : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        //Toast.makeText(this,"ITEM SELECTED = ${item!!.itemId} MENU ITEM = ${R.id.menuItemLogout}", Toast.LENGTH_LONG).show()
+
         when(item!!.itemId)
         {
+
             R.id.menuItemLogout ->
             {
-                Toast.makeText(this,"Logout",Toast.LENGTH_LONG)
+                Toast.makeText(this,"Logout",Toast.LENGTH_LONG).show()
+                finish()
+            }
+            R.id.menuItemAddEnterprise ->
+            {
+
             }
         }
         return super.onOptionsItemSelected(item)
