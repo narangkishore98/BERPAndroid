@@ -56,6 +56,19 @@ class EnterpriseDetailActivity : AppCompatActivity() {
             AddProductActivity.open(this,null)
             Toast.makeText(this, "Add Products",Toast.LENGTH_SHORT).show()
         })
+        viewProductsFab.setOnClickListener(View.OnClickListener {
+            if(selectedEnterprise!!.products.size == 0)
+            {
+                showAlert("No Products Exist", this)
+            }
+            else
+            {
+                var bundle = Bundle()
+                bundle.putSerializable("selectedEnterprise",selectedEnterprise)
+                ViewEmployeeActivity.open(this,bundle)
+                Toast.makeText(this, "View Products",Toast.LENGTH_SHORT).show()
+            }
+        })
     }
     fun showAlert(message:String, activity: Activity)
     {
