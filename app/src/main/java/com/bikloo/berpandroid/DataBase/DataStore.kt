@@ -13,14 +13,11 @@ import kotlin.collections.ArrayList
 
 class DataStore
 {
-
     lateinit var userList : ArrayList<User>
-
-
     companion object
     {
-        val instance:DataStore = DataStore()
 
+        val instance:DataStore = DataStore()
         var selectedEnterprise:Enterprise? = null
 
     }
@@ -72,5 +69,10 @@ class DataStore
         //Log.d("User Obj : ->>>>",userOBJ.toString())
         return userOBJ
     }
+
+    override fun toString(): String {
+        return "DataStore(userList=${userList.toString()})"
+    }
+
 
 }

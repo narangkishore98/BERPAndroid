@@ -7,8 +7,8 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.widget.EditText
 import com.bikloo.berpandroid.Classes.User
+import com.bikloo.berpandroid.DataBase.DBUser
 import com.bikloo.berpandroid.DataBase.DataStore
 import kotlinx.android.synthetic.main.activity_login.*
 import java.util.regex.Pattern
@@ -16,10 +16,34 @@ import java.util.regex.Pattern
 class LoginActivity : AppCompatActivity() {
     lateinit var mSharedpreferences: SharedPreferences
     lateinit var mEditor: SharedPreferences.Editor
+    lateinit var mDBUser : DBUser
+    lateinit var mUsersArrayList: MutableList<User>
 
     override fun onCreate(savedInstanceState: Bundle?)
     {
         val dataStore = DataStore.instance.processJSON(this)
+        //Testing to display if we get users from JSON File
+        for(user in DataStore.instance.userList)
+        {
+            Log.d("User Json ------>>>",user.toString())
+        }
+
+        mDBUser = DBUser(this)
+        mUsersArrayList = mDBUser.allUsers
+        if(mUsersArrayList.isEmpty())
+        {
+            loadUserFromJSONintoDB()
+        }
+        else
+        {
+            //Test size display
+            Log.d("User List size :",mUsersArrayList.size.toString())
+        }
+        // Testing To display Users from DB
+        for(user in mDBUser.allUsers)
+        {
+            Log.d("User from DB----->",user.toString())
+        }
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -30,6 +54,13 @@ class LoginActivity : AppCompatActivity() {
         this.supportActionBar!!.hide()
     }
 
+    fun loadUserFromJSONintoDB()
+    {
+        for (user in DataStore.instance.userList) // got array list of user from JSON
+        {
+            mDBUser.insert(user)
+        }
+    }
     fun clickedLogin(view : View)
     {
         saveRememeberMe()

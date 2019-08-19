@@ -1,15 +1,18 @@
 package com.bikloo.berpandroid.Classes
 open class User
 {
+    constructor()
+    {
+
+        USER_ID += 1
+        this.userId = USER_ID
+    }
+
     enum class UserType
     {
         Owner , Employee
     }
 
-    constructor()
-    {
-
-    }
     companion object
     {
         var USER_ID : Int = 0
