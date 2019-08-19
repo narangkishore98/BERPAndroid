@@ -33,6 +33,15 @@ open class User
         USER_ID += 1
         this.userId = USER_ID
     }
+    constructor(userId : Int,email: String?, fullName: String?, password: String?, userType: UserType?, address: String?) {
+        this.userId = userId
+        this.email = email
+        this.fullName = fullName
+        this.password = password
+        this.userType = userType
+        this.address = address
+        this.userId = USER_ID
+    }
 
     fun doLogin(password:String) : Boolean
     {

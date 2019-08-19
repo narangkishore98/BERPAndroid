@@ -7,7 +7,6 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.widget.Toast
 import com.bikloo.berpandroid.Classes.User
 import com.bikloo.berpandroid.DataBase.DBUser
 import com.bikloo.berpandroid.DataBase.DataStore
