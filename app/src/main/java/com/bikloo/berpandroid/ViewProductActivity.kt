@@ -15,7 +15,7 @@ class ViewProductActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_view_product)
         productRecyclerView.layoutManager = LinearLayoutManager(this)
-        //productRecyclerView.adapter = ProductAdapter(DataStore.selectedEnterprise!!.products)
+        productRecyclerView.adapter = ProductAdapter(DataStore.selectedEnterprise!!.products)
 
     }
     companion object

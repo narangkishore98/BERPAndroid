@@ -53,7 +53,7 @@
             android:layout_marginEnd="8dp"
             app:layout_constraintStart_toEndOf="@+id/txtHeadingForEnterpriseName" android:layout_marginStart="8dp"
             app:layout_constraintTop_toBottomOf="@+id/txtHeading" android:layout_marginTop="152dp"
-            android:id="@+id/txtDtlBonusMultiplier"/>
+            android:id="@+id/txtDtlBonusMultiplier" android:textAlignment="textEnd"/>
     <TextView
             android:text="TextView"
             android:layout_width="214dp"
@@ -62,7 +62,7 @@
             android:layout_marginEnd="8dp"
             app:layout_constraintStart_toEndOf="@+id/txtHeadingForEnterpriseName" android:layout_marginStart="8dp"
             app:layout_constraintTop_toBottomOf="@+id/txtHeading" android:layout_marginTop="180dp"
-    />
+            android:textAlignment="textEnd"/>
     <TextView
             android:text="TextView"
             android:layout_width="214dp"
@@ -71,7 +71,7 @@
             android:layout_marginEnd="8dp"
             app:layout_constraintStart_toEndOf="@+id/txtHeadingForEnterpriseName" android:layout_marginStart="8dp"
             app:layout_constraintTop_toBottomOf="@+id/txtHeading" android:layout_marginTop="116dp"
-    />
+            android:textAlignment="textEnd"/>
     <TextView
             android:text="TextView"
             android:layout_width="214dp"
@@ -80,7 +80,7 @@
             android:layout_marginEnd="8dp"
             app:layout_constraintStart_toEndOf="@+id/txtHeadingForEnterpriseName" android:layout_marginStart="8dp"
             app:layout_constraintTop_toBottomOf="@+id/txtHeading" android:layout_marginTop="80dp"
-    />
+            android:textAlignment="textEnd"/>
     <com.getbase.floatingactionbutton.FloatingActionsMenu android:layout_width="wrap_content"
                                                           android:layout_height="wrap_content"
                                                           app:fab_addButtonColorNormal="@color/colorPrimary"
