@@ -65,7 +65,8 @@ class SignUpActivity : AppCompatActivity() {
                                 }
                                 userID = userID+1
                                 Log.d("Id : ",userID.toString())
-                                mDBUser.insert(User(userID,edtEmailSignup.text!!.toString(),edtFullNameSignup.text!!.toString(),edtPasswordSignup.text!!.toString(),User.UserType.Owner,edtFullAddressSignup.text!!.toString()))
+
+                                mDBUser.insert(userID,User(edtEmailSignup.text!!.toString(),edtFullNameSignup.text!!.toString(),edtPasswordSignup.text!!.toString(),User.UserType.Owner,edtFullAddressSignup.text!!.toString()))
 
                                 Toast.makeText(this,"Registration Success",Toast.LENGTH_SHORT).show()
                                 mUsersArrayList = mDBUser.allUsers
