@@ -45,6 +45,7 @@ class AddProductFromBarcodeActivity : AppCompatActivity() {
             if(checkProductIfExistsWithBarcode(txtBarcode.text.toString()))
             {
                 showAlert("Product Already Exist!", this)
+                Toast.makeText(this, "Product Already Exist! Please Try Again With Different Barcode.",Toast.LENGTH_LONG ).show()
                 finish()
             }
             else {

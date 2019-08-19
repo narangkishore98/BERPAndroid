@@ -120,7 +120,7 @@
                                                                app:fab_icon="@drawable/ic_add_product"
                                                                app:fabSize="mini"
 
-                                                               app:fab_title="View Employee"
+                                                               app:fab_title="Add Product"
                                                                android:id="@+id/addProductsFab"
         />
         <com.getbase.floatingactionbutton.FloatingActionButton android:layout_width="wrap_content"
@@ -130,7 +130,7 @@
                                                                app:fab_icon="@drawable/ic_view_product"
                                                                app:fabSize="mini"
 
-                                                               app:fab_title="View Employee"
+                                                               app:fab_title="View Product"
                                                                android:id="@+id/viewProductsFab"
         />
     </com.getbase.floatingactionbutton.FloatingActionsMenu>
