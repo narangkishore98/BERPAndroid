@@ -36,6 +36,20 @@ class DBUser(context: Context) {
         db.close()
 
     }
+    fun insert(userID: Int,user: User) {
+        val db = dbHelper.writableDatabase
+
+        val cv = ContentValues()
+        cv.put(USER_ID, userID)
+        cv.put(USER_EMAIL, user.email)
+        cv.put(USER_FULL_NAME,user.fullName)
+        cv.put(USER_PASSWORD, user.password)
+        cv.put(USER_TYPE,user.userType.toString())
+        cv.put(USER_ADDRESS,user.address)
+        db.insert(TABLE_NAME, null, cv)
+        db.close()
+
+    }
 
     fun update(user: User) {
         val db = dbHelper.writableDatabase

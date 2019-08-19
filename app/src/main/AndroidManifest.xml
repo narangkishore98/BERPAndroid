@@ -27,7 +27,13 @@
         </activity>
         <activity android:name=".DashboardActiviy">
         </activity>
+
         <activity android:name=".SignUpActivity">
+                android:label="Sign Up"
+            android:parentActivityName=".LoginActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                       android:value=".LoginActivity"/>
+
         </activity>
         <activity android:name=".LoginActivity">
         </activity>
