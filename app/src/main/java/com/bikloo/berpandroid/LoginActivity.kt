@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
+import com.bikloo.berpandroid.Classes.Owner
 import com.bikloo.berpandroid.Classes.User
 import com.bikloo.berpandroid.DataBase.DBUser
 import com.bikloo.berpandroid.DataBase.DataStore
@@ -98,7 +99,7 @@ class LoginActivity : AppCompatActivity() {
                         Log.d("Correct Details User:",existUser.toString())
 
 
-                        DataStore.selectedUser = existUser
+                        DataStore.selectedOwner = existUser as Owner
                         DashboardActiviy.open(this, null)
                     }
                     else

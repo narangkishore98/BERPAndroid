@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.ArrayAdapter
 import com.bikloo.berpandroid.Classes.Enterprise
 import com.bikloo.berpandroid.Classes.Product
+import com.bikloo.berpandroid.DataBase.DataStore
 import kotlinx.android.synthetic.main.activity_add_enterprise.*
 
 class AddEnterpriseActivity : AppCompatActivity() {
@@ -22,6 +23,15 @@ class AddEnterpriseActivity : AppCompatActivity() {
         spnrEnterpriseType.adapter = adapter
 
         btnAddEnterprise.setOnClickListener(View.OnClickListener {
+            val enterpriseName = edtEnterpriseName.text.toString()
+            val enterpriseAddress = edtAddress.text.toString()
+            val enterpriseBonusMultiplier = edtBonusMultiplier.text.toString()
+            val enterpriseType = getType(typeList[spnrEnterpriseType.selectedItemPosition])
+
+            var enterprise = Enterprise(enterpriseName!!, enterpriseAddress!! , enterpriseType)
+            enterprise.bonusMultiplier = enterpriseBonusMultiplier.toInt()
+
+            DataStore.selectedOwner!!.addEnterprise(enterprise)
 
         })
 

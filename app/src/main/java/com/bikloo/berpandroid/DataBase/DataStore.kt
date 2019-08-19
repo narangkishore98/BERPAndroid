@@ -3,6 +3,7 @@ package com.bikloo.berpandroid.DataBase
 import android.content.Context
 import android.provider.ContactsContract
 import com.bikloo.berpandroid.Classes.Enterprise
+import com.bikloo.berpandroid.Classes.Owner
 import com.bikloo.berpandroid.Classes.User
 import org.json.JSONArray
 import org.json.JSONException
@@ -19,7 +20,7 @@ class DataStore
 
         val instance:DataStore = DataStore()
         var selectedEnterprise:Enterprise? = null
-        var selectedUser : User? = null
+        var selectedOwner : Owner? = null
     }
 
     fun loadJSONFromAsset(withContext: Context): String? {
