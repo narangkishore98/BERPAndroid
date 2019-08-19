@@ -65,7 +65,7 @@ class EnterpriseDetailActivity : AppCompatActivity() {
             {
                 var bundle = Bundle()
                 bundle.putSerializable("selectedEnterprise",selectedEnterprise)
-                ViewEmployeeActivity.open(this,bundle)
+                ViewProductActivity.open(this,bundle)
                 Toast.makeText(this, "View Products",Toast.LENGTH_SHORT).show()
             }
         })
