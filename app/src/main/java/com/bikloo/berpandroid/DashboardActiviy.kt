@@ -53,7 +53,7 @@ class DashboardActiviy : AppCompatActivity() {
             }
             R.id.menuItemAddEnterprise ->
             {
-
+                AddEnterpriseActivity.open(this,null)
             }
         }
         return super.onOptionsItemSelected(item)
