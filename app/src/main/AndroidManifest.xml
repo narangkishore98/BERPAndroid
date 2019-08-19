@@ -11,6 +11,8 @@
             android:roundIcon="@mipmap/ic_launcher_berp"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".AddEnterpriseActivity">
+        </activity>
         <activity android:name=".ViewProductActivity">
         </activity>
         <activity android:name=".AddProductFromBarcodeActivity">
@@ -45,7 +47,6 @@
         <activity
                 android:name=".MainActivity"
                 android:label="@string/app_name">
-
         </activity>
     </application>
 
