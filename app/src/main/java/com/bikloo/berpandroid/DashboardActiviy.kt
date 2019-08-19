@@ -6,6 +6,7 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
@@ -45,6 +46,7 @@ class DashboardActiviy : AppCompatActivity() {
             builder.setNegativeButton("Logout") { dialog, which ->
                 finish()
             }
+            builder.setCancelable(false)
             builder.show()
         }
         else
@@ -53,10 +55,22 @@ class DashboardActiviy : AppCompatActivity() {
             for(enterprise in DataStore.selectedOwner!!.myEnterprise)
             {
                 list.add(enterprise)
+                Log.d("Info" , enterprise.toString())
             }
             enterprisesRecyclerView.adapter = EnterpriseAdapter(list)
         }
 
+    }
+
+    override fun onResume() {
+        var list:ArrayList<Enterprise> = ArrayList()
+        for(enterprise in DataStore.selectedOwner!!.myEnterprise)
+        {
+            list.add(enterprise)
+            Log.d("Info" , enterprise.toString())
+        }
+        enterprisesRecyclerView.adapter = EnterpriseAdapter(list)
+        super.onResume()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
