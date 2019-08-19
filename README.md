@@ -47,3 +47,8 @@ This project is contributed by <br/>
 
 <img src="https://user-images.githubusercontent.com/29982984/63291697-0ec02d00-c292-11e9-9880-c9b127692f3a.jpeg" width="200"/>
 <br/>
+
+### View Products Screen
+
+<img src="https://user-images.githubusercontent.com/29982984/63294641-d53ef000-c298-11e9-82e4-fd427cb4a81f.jpeg" width="200"/>
+<br/>
