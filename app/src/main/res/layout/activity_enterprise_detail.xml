@@ -47,42 +47,42 @@
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="56dp"/>
     <TextView
             android:text="TextView"
-            android:layout_width="167dp"
+            android:layout_width="0dp"
             android:layout_height="19dp"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="35dp"
             app:layout_constraintStart_toEndOf="@+id/txtHeadingForEnterpriseName" android:layout_marginStart="8dp"
             app:layout_constraintTop_toBottomOf="@+id/txtHeading" android:layout_marginTop="152dp"
             android:id="@+id/txtDtlBonusMultiplier" android:textAlignment="textEnd"/>
     <TextView
             android:text="TextView"
-            android:layout_width="169dp"
+            android:layout_width="0dp"
             android:layout_height="19dp"
             android:id="@+id/txtDtlEnterpriseType" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="35dp"
             app:layout_constraintStart_toEndOf="@+id/txtHeadingForEnterpriseName" android:layout_marginStart="8dp"
             app:layout_constraintTop_toBottomOf="@+id/txtHeading" android:layout_marginTop="180dp"
             android:textAlignment="textEnd"/>
     <TextView
             android:text="TextView"
-            android:layout_width="168dp"
+            android:layout_width="0dp"
             android:layout_height="21dp"
             android:id="@+id/txtDtlEnterpriseAddress" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="35dp"
             app:layout_constraintStart_toEndOf="@+id/txtHeadingForEnterpriseName" android:layout_marginStart="8dp"
             app:layout_constraintTop_toBottomOf="@+id/txtHeading" android:layout_marginTop="116dp"
             android:textAlignment="textEnd"/>
     <TextView
             android:text="TextView"
-            android:layout_width="171dp"
-            android:layout_height="20dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:id="@+id/txtDtlEnterpriseName" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="35dp"
             app:layout_constraintStart_toEndOf="@+id/txtHeadingForEnterpriseName" android:layout_marginStart="8dp"
             app:layout_constraintTop_toBottomOf="@+id/txtHeading" android:layout_marginTop="80dp"
             android:textAlignment="textEnd"/>
-    <com.getbase.floatingactionbutton.FloatingActionsMenu android:layout_width="wrap_content"
-                                                          android:layout_height="wrap_content"
+    <com.getbase.floatingactionbutton.FloatingActionsMenu android:layout_width="211dp"
+                                                          android:layout_height="437dp"
                                                           app:fab_addButtonColorNormal="@color/colorPrimary"
                                                           app:fab_addButtonColorPressed="@color/design_default_color_primary_dark"
 
@@ -95,7 +95,7 @@
 
         <com.getbase.floatingactionbutton.FloatingActionButton android:layout_width="wrap_content"
                                                                android:layout_height="wrap_content"
-                                                                app:fab_colorNormal="@color/white"
+                                                               app:fab_colorNormal="@color/white"
                                                                app:fab_colorPressed="@color/white_pressed"
                                                                app:fab_icon="@drawable/ic_add_circle"
                                                                app:fabSize="mini"
