@@ -52,3 +52,18 @@ This project is contributed by <br/>
 
 <img src="https://user-images.githubusercontent.com/29982984/63294641-d53ef000-c298-11e9-82e4-fd427cb4a81f.jpeg" width="200"/>
 <br/>
+
+### Sign Up Activity
+
+<img src="https://user-images.githubusercontent.com/27397696/63299850-c4947700-c2a4-11e9-8bfc-5c5d3e98d9b2.png" width="200"/>
+<br/>
+
+### First Time Login
+
+<img src="https://user-images.githubusercontent.com/27397696/63299935-f1e12500-c2a4-11e9-98d7-dc680394880c.png" width="200"/>
+<br/>
+
+### Add Enterprise Screen
+
+<img src="https://user-images.githubusercontent.com/27397696/63300069-569c7f80-c2a5-11e9-9640-5487c082c68d.png" width="200"/>
+<br/>
