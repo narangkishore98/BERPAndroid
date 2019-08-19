@@ -27,3 +27,23 @@ This project is contributed by <br/>
 
 <img src="https://user-images.githubusercontent.com/29982984/63288886-cd2c8380-c28b-11e9-81b4-6836f9ee69ab.png" width="200"/>
 <br/>
+
+### Enterprise Details
+
+<img src="https://user-images.githubusercontent.com/29982984/63290952-8b520c00-c290-11e9-85b7-d6bae8988ec5.jpeg" width="200"/>
+<br/>
+
+### FAB with more Options
+
+<img src="https://user-images.githubusercontent.com/29982984/63291048-c5bba900-c290-11e9-84f0-8938d3d7e7e4.jpeg" width="200"/>
+<br/>
+
+### Barcode Scanner
+
+<img src="https://user-images.githubusercontent.com/29982984/63291419-788c0700-c291-11e9-9bcd-df6b57d7b680.jpeg" width="200"/>
+<br/>
+
+### Enter Product Details Screen
+
+<img src="https://user-images.githubusercontent.com/29982984/63291697-0ec02d00-c292-11e9-9880-c9b127692f3a.jpeg" width="200"/>
+<br/>
