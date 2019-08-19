@@ -63,11 +63,12 @@ class EnterpriseDetailActivity : AppCompatActivity() {
             }
             else
             {
-                var bundle = Bundle()
-                bundle.putSerializable("selectedEnterprise",selectedEnterprise)
-                ViewProductActivity.open(this,bundle)
+                //var bundle = Bundle()
+                //bundle.putSerializable("selectedEnterprise",selectedEnterprise)
+                ViewProductActivity.open(this,null)
                 Toast.makeText(this, "View Products",Toast.LENGTH_SHORT).show()
             }
+
         })
     }
     fun showAlert(message:String, activity: Activity)
