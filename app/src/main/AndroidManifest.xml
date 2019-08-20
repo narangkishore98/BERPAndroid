@@ -11,6 +11,33 @@
             android:roundIcon="@mipmap/ic_launcher_berp"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity
+                android:name=".ContactUsActivity"
+                android:label="@string/title_activity_contact_us"
+                android:parentActivityName=".DashboardActiviy"
+                android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.bikloo.berpandroid.DashboardActiviy"/>
+        </activity>
+        <activity
+                android:name=".InstructionActivity"
+                android:label="@string/title_activity_instruction"
+                android:parentActivityName=".DashboardActiviy"
+                android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.bikloo.berpandroid.DashboardActiviy"/>
+        </activity>
+        <activity
+                android:name=".AboutUsActivity"
+                android:label="@string/title_activity_about_us"
+                android:parentActivityName=".DashboardActiviy"
+                android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.bikloo.berpandroid.DashboardActiviy"/>
+        </activity>
         <activity android:name=".AddEnterpriseActivity">
         </activity>
         <activity android:name=".ViewProductActivity">
@@ -27,13 +54,13 @@
         </activity>
         <activity android:name=".DashboardActiviy">
         </activity>
-
-        <activity android:name=".SignUpActivity">
+        <activity
+                android:name=".SignUpActivity"
                 android:label="Sign Up"
-            android:parentActivityName=".LoginActivity">
-            <meta-data android:name="android.support.PARENT_ACTIVITY"
-                       android:value=".LoginActivity"/>
-
+                android:parentActivityName=".LoginActivity">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value=".LoginActivity"/>
         </activity>
         <activity android:name=".LoginActivity">
         </activity>

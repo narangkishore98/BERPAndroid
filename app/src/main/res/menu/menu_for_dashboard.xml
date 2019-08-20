@@ -7,7 +7,23 @@
           android:icon="@drawable/ic_add"
     />
     <item android:id="@+id/menuItemLogout"
-          app:showAsAction="never"
+          app:showAsAction="always"
           android:title="Logout"
+          android:icon="@drawable/logouticon"
           />
+    <item android:id="@+id/menuItemInstructions"
+          app:showAsAction="never"
+          android:title="Instructions"
+          android:icon="@drawable/instructionicon"
+    />
+    <item android:id="@+id/menuItemContactUs"
+          app:showAsAction="never"
+          android:title="Contact Us"
+          android:icon="@drawable/contactusicon"
+    />
+    <item android:id="@+id/menuItemAboutUs"
+          app:showAsAction="never"
+          android:title="About Us"
+          android:icon="@drawable/aboutusicon"
+    />
 </menu>

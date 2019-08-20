@@ -94,6 +94,21 @@ class DashboardActiviy : AppCompatActivity() {
             {
                 AddEnterpriseActivity.open(this,null)
             }
+            R.id.menuItemInstructions ->
+            {
+                var intent:Intent =  Intent(this, InstructionActivity::class.java)
+                this.startActivity(intent)
+            }
+            R.id.menuItemContactUs ->
+            {
+                var intent:Intent =  Intent(this, ContactUsActivity::class.java)
+                this.startActivity(intent)
+            }
+            R.id.menuItemAboutUs ->
+            {
+                var intent:Intent =  Intent(this, AboutUsActivity::class.java)
+                this.startActivity(intent)
+            }
         }
         return super.onOptionsItemSelected(item)
     }
